@@ -14,23 +14,22 @@ void clear_stdin() // tömmer buffern (stdin)
 
 void print_welcome() // skriver ut text, görs endast en gång
 {
-  puts("\n\nVälkommen till lagerhantering 1.1\n=================================\n\n");
-  test();
+  puts("\n\nVälkommen till lagerhantering 1.0\n=================================\n\n");
 }
 
 
-char ask_question_char(char *q, char *alt)
+char ask_question_char(char *q, char *alt) //fråga
 {
   printf("%s [%s]\n", q, alt);
  
   char alf = 0;
-  int error = scanf(" %c", &alf);
-  
-  while ((strchr(alt, alf) == NULL && alt != NULL )|| error == 0)
+  alf = getchar();
+
+  while (strchr(alt, alf) == NULL)
     {
       printf("Felaktig input '%c', försök igen om du vågar! [%s]\n", alf, alt);
       clear_stdin();
-      error = scanf(" %c", &alf);
+      alf = getchar();
     } 
 
   clear_stdin();
@@ -62,74 +61,64 @@ char *ask_question_string(char *q,int ln)
   char *buffer;
   buffer = malloc(ln); 
   
-  fgets (buffer, ln-1, stdin);
-  int lngth = strlen(buffer);
-  if ((lngth>0) && (buffer[lngth - 1] == '\n'))
-    buffer[lngth - 1] = '\0';
+  fgets (buffer, ln, stdin);
+ 
+  if ((strlen(buffer)>0) && (buffer[strlen (buffer) - 1] == '\n'))
+    buffer[strlen (buffer) - 1] = '\0';
   
-  clear_stdin();
   return buffer;
 }
 
 
-void print_product(goods_t *g)
+void print_product(goods_t g)
 { 
-  if(g == NULL){
-    return;
-  }
-  printf("Namn: %s\n", g->name);
-  printf("Beskrivning: %s\n", g->desc);
-  printf("Pris: %d kr\n", g->price);
-  printf("Lagerhylla: %s\n",g->place);
-  printf("Antal: %d st\n", g->count);
+  printf("Namn: %s\n", g.name);
+  printf("Beskrivning: %s\n", g.desc);
+  printf("Pris: %d kr\n", g.price);
+  printf("Lagerhylla: %s\n",g.place);
+  printf("Antal: %d st\n", g.count);
 }
 
 
-goods_t * list_page(goods_t *node) //returns  products on page
+void list_page(int page)
 {
-
-  int i = 0;
-  while(1){
-  
-    printf("\n%d. %s",i+1,node->name);
-    i++;
-
-    if(node->next == NULL || i > 19){
-      return node;
+  int first_i = page*20;
+ 
+  for(int i = 0; (i+first_i)<amount && i < 20; i++)
+    {
+      //visa 20 första
+      printf("%d. %s\n",(i+1),good[i+first_i].name);
     }
-    
-    node = node->next;
-  }
-  return node;
-
 }
 
-goods_t * list_products(){
 
+int list_products()
+{
+  int page = 0; 
   char *a;
   char q[70];
-  int page = 0;
-
-  goods_t *last_node_on_page = root_good;
-  goods_t *first_node_on_page = root_good;
-
-  if(root_good == NULL){
-    return NULL;
-  }
 
   while(1){ 
-      
-      first_node_on_page = last_node_on_page;
-      last_node_on_page = list_page(last_node_on_page);
-
-
+      list_page(0);
       //check if there is next and prev page 
-      int left_products_on_page = 20;
+      int left_products_on_page = amount - (page*20);
 
-     
-      sprintf(q,"\n Välj en vara [1-%d] eller [N]ästa sida,[F]öregående,[A]vbryt",left_products_on_page);
-
-        
+      if(page == 0){
+        //no prev
+        if(page*20 > amount){
+            //q = "\n Välj en vara [1-20] eller [N]ästa sida,[A]vbryt";
+            sprintf(q,"\n Välj en vara [1-%d] eller [N]ästa sida,[A]vbryt",left_products_on_page);
+          }else{
+            sprintf(q,"\n Välj en vara [1-%d] eller [A]vbryt",left_products_on_page);
+              //q = "\n Välj en vara [1-20],[A]vbryt";
+            }
+        }else{
+        if(page*20 > amount){
+            sprintf(q,"\n Välj en vara [1-%d] eller [N]ästa sida,[F]öregående,[A]vbryt",left_products_on_page);
+          }else{
+            sprintf(q,"\n Välj en vara [1-%d] eller [F]öregående,[A]vbryt",left_products_on_page);
+          }
+        }
       
       a = ask_question_string(q,100);
 
@@ -139,27 +128,20 @@ goods_t * list_products(){
             int digit = atoi(a);
             free(a);
             //TODO show product with index
-            return next(first_node_on_page,digit-1);
+            return digit+(page*20)-1;
 
-
-          }else if(a[0] == 'N'){
-            page++;
-          
+      }else if(a[0] == 'N'){
+          page++;
           }else if(a[0] == 'F'){
-            page--;
-            last_node_on_page = prev(first_node_on_page,20);
-
-
+            page--;  
           }else if(a[0] == 'A'){
-            return NULL; 
+            return -1; 
           }else{
             puts("Felaktig inmatning");
           }
-
-
       }
   
-  return NULL;
+  return -1;
 }
 
 
@@ -191,45 +173,45 @@ char *ask_for_place(char *q)
 }
 
 
-int edit_product(goods_t *good)
+int edit_product(int index)
 {
   //show product
-
+  print_product(good[index]);
   
-  goods_t tmp = *good;
+  struct goods tmp = good[index];
 
 
   int q = ask_question_char("\nVad vill du redigera?\n[N]amn\n[B]eskrivning\n[P]ris\n[L]agerhylla\nAn[t]al\n\n[a]vbryt","NBPLta");
   switch (q)
     {
     case 'N': 
-      printf("Nuvarande namn:%s\n", good->name);
+      printf("Nuvarande namn:%s\n", good[index].name);
       char *new_name = ask_question_string("Nytt namn:",100);
-      good->name = new_name;
+      good[index].name = new_name;
       break;
       
     case 'B':
-      printf("Nuvarande beskrivning:%s\n", good->desc);
+      printf("Nuvarande beskrivning:%s\n", good[index].desc);
       char *new_desc = ask_question_string("Ny beskrivning:",100);
-      good->desc = new_desc;
+      good[index].desc = new_desc;
       break;
       
     case 'P':
-      printf("Nuvarande pris:%d\n", good->price);
+      printf("Nuvarande pris:%d\n", good[index].price);
       int new_price = ask_question_int("Nytt pris:");
-      good->price = new_price;
+      good[index].price = new_price;
       break;
       
     case 'L':
-      printf("Nuvarande lagerhylla:%s\n", good->place);
+      printf("Nuvarande lagerhylla:%s\n", good[index].place);
       char *new_place = ask_for_place("Ny lagerhylla:");
-      good->place = new_place;
+      good[index].place = new_place;
       break;
       
     case 't':
-      printf("Nuvarande antal:%d\n", good->count);
+      printf("Nuvarande antal:%d\n", good[index].count);
       int new_count = ask_question_int("Nytt antal:");
-      good->count = new_count;
+      good[index].count = new_count;
       break;
       
     case 'a':
@@ -237,12 +219,12 @@ int edit_product(goods_t *good)
       break;
       
     default:
-      
+      edit_product(index);
       break;   
     }
   
   undo.copy = tmp;
-  undo.merch = good;
+  undo.merch = &good[index];
   undo.type = 3;
   return 0;
 }
@@ -253,8 +235,8 @@ void add_product_interf()
 {
   puts("\n...Lägga till produkt...");
   char *name  =   ask_question_string("Namn: ",100);
-  char *desc  =   ask_question_string("Beskrivning:",100);
-  char *place =   ask_for_place("Lagerhylla:");
+  char *desc  =   ask_question_string("Beskrivning: ",100);
+  char *place =   ask_for_place("Lagerhylla: ");
 
   int price = ask_question_int("Pris:");
   int count = ask_question_int("Antal:");
@@ -263,12 +245,19 @@ void add_product_interf()
   printf("Namn: %s \n Beksrivning:%s \n Lagerhylla:%s \n Pris:%d \n Antal:%d \n", name, desc, place, price, count);
   char q = ask_question_char("Vill du lägga till varan? [J]a,[N]ej,[R]edigera","JNR");
 
+  struct goods god=
+    {
+      .name  = name,
+      .desc  = desc,
+      .place = place,
+      .price = price,
+      .count = count
+    };
   
-  
-  switch (q){
+  switch (q)
+    {
     case 'J': 
-      undo.merch = add_product(name,desc,price,place,count);
-      undo.type = 1;
+      add_good(god);
       break;
 
     case 'N':
@@ -278,10 +267,14 @@ void add_product_interf()
       break;
 
     case 'R':
-      edit_product(add_product(name,desc,price,place,count));   
+      add_good(god);
+      edit_product(amount-1);
       break;
     }   
 
+  // free(name);
+  // free(desc);
+  // free(place);
   
 }
 
@@ -290,53 +283,39 @@ void remove_product_interf()
 {
   puts("Ta bort en vara");
   puts("Välj en vara att ta bort:");
-  goods_t *l = list_products();
+  int i = list_products();
   
-      print_product(l);
+  if(i > 0 && i < amount){
+      print_product(good[i]);
       char q = ask_question_char("Ta bort varan? [J]a,[N]ej","JN");
       if(q == 'J'){
-        undo.copy = *l;
-        undo.type = 2;
-        remove_good(l);
+        remove_product(i);
       }
-    
+    }
   
 }
 
 void list_products_interf(){
-
-	 
-    print_product(list_products());
+	 int index = list_products();
+      if(index > 0 && index < amount){
+        //if index = -1 then user aborted 
+        print_product(good[index]);
+      }
 }
 void regret_action_interf(){
-
-  if(undo.type == 0){
-    puts("Inget att ångra");
-    return;
+	char q = ask_question_char("Är du säker på att du vill ångra senaste ändringen? ([J]a,[N]ej)","JA");
+      if(q == 'J')
+  {
+    regret();
   }
-
-    puts("Ångra händelsen:");
-  switch(undo.type){
-    case 1:
-    printf("Lägg till:%s\n",undo.merch->name);
-    break;
-    case 2:
-    printf("Radera:%s\n",undo.copy.name);
-    break;
-    case 3: 
-    printf("Redigera:%s\n",undo.copy.name);
-    break;
-  }
-
-	char q = ask_question_char("Är du säker på att du vill ångra? ([J]a,[N]ej)","JN");
-    if(q == 'J'){
-      regret();
-    }
 }
 
 void edit_product_interf()
 {
   puts("Redigera en vara");
-  edit_product(list_products());
+  
+  list_products();
+  int s = ask_question_int("Välj vara:");
+  edit_product(s-1);
 }
 
