@@ -1,5 +1,6 @@
 #include <stdbool.h>
 
+
 struct goods
 {
   char *name;
@@ -7,8 +8,6 @@ struct goods
   int price; 
   char *place;
   int count;
-  struct goods *next;
-  struct goods *prev;
 };
 typedef struct goods goods_t;
 
@@ -22,24 +21,21 @@ struct action // används för att kunna ångra
 typedef struct action action_t;
 
 
-goods_t *root_good;
-goods_t *last_good;
+goods_t good[100];
+
+int amount;
 action_t undo;
 
-void test();
 
 bool valid_place(char *place);
 
 bool place_empty(char *place);
 
-int remove_good(goods_t *d);
+int remove_product(int index);
 
+int add_good(goods_t god);
 
 void regret();
 
-goods_t * add_product(char *name,char *desc,int price,char *place,int count);
 
-int remove_good(goods_t *d);
 
-goods_t * next(goods_t *g,int i);
-goods_t * prev(goods_t *g,int i);
