@@ -4,6 +4,7 @@
 
 void print_welcome();
 
+
 int ask_question_int(char *q);
 
 void add_product_interf();
