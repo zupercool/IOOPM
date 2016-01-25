@@ -1,0 +1,225 @@
+\hypertarget{classAvatar}{}\section{Avatar Class Reference}
+\label{classAvatar}\index{Avatar@{Avatar}}
+
+
+The \hyperlink{classAvatar}{Avatar} is the player.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAvatar_a7d1666c152fc18894c89952056157655}{Avatar} (String name)
+\item 
+String \hyperlink{classAvatar_ad38c9c9193cb31f148d055c0e5f21220}{get\+Name} ()
+\item 
+\hyperlink{classRoom}{Room} \hyperlink{classAvatar_a2ddc7dc9d3d84486a6364c76b2f2f925}{get\+Current\+Room} ()
+\item 
+void \hyperlink{classAvatar_a1936a0595cb77137f114016ddaad96eb}{set\+Current\+Room} (\hyperlink{classRoom}{Room} new\+Room)
+\item 
+\hyperlink{classRoom}{Room} \hyperlink{classAvatar_a8ce1a94916888a549fc8315e0ba19af9}{get\+Adjacent\+Room} (int direction)
+\item 
+int \hyperlink{classAvatar_a126da75edbc8befd641c854559d2f37b}{move} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the player to a new room if it is availible. \end{DoxyCompactList}\item 
+void \hyperlink{classAvatar_ab5d927b79ce7bd457a49380d8aa8c9cf}{discover\+Room} (\hyperlink{classRoom}{Room} new\+Room)
+\begin{DoxyCompactList}\small\item\em Adds room to discovered rooms. \end{DoxyCompactList}\item 
+\hypertarget{classAvatar_a955bc3a1e7885c2087a2a5f862788389}{}List$<$ \hyperlink{classRoom}{Room} $>$ \hyperlink{classAvatar_a955bc3a1e7885c2087a2a5f862788389}{get\+Discovered} ()\label{classAvatar_a955bc3a1e7885c2087a2a5f862788389}
+
+\begin{DoxyCompactList}\small\item\em Fetches the list of discovered rooms. \end{DoxyCompactList}\item 
+\hypertarget{classAvatar_acc903602ae6bf55bec0fab185e5a4320}{}void \hyperlink{classAvatar_acc903602ae6bf55bec0fab185e5a4320}{print\+Discovered} ()\label{classAvatar_acc903602ae6bf55bec0fab185e5a4320}
+
+\begin{DoxyCompactList}\small\item\em Prints discovered rooms. \end{DoxyCompactList}\item 
+\hyperlink{classInventory}{Inventory} \hyperlink{classAvatar_a542d84ae586f4c7ece4c9020a34d001d}{get\+Inventory} ()
+\item 
+void \hyperlink{classAvatar_a4858e361b655a9abd4772550a33d7efd}{add\+Action} (int probability, int action\+I\+D)
+\begin{DoxyCompactList}\small\item\em This function adds actions to the player. \end{DoxyCompactList}\item 
+\hypertarget{classAvatar_aec43b383b3ce2b1de5aca785c0196ce5}{}void \hyperlink{classAvatar_aec43b383b3ce2b1de5aca785c0196ce5}{check\+Actions} ()\label{classAvatar_aec43b383b3ce2b1de5aca785c0196ce5}
+
+\begin{DoxyCompactList}\small\item\em This checks and runs the players actions including them bound to the room he/she is currently in. \end{DoxyCompactList}\item 
+\hypertarget{classAvatar_a81c81ae610d7720832203dc749b28260}{}void {\bfseries run\+Action} (int action\+I\+D)\label{classAvatar_a81c81ae610d7720832203dc749b28260}
+
+\item 
+int \hyperlink{classAvatar_ae639c0e572b3430f319ef5145a33ec1d}{get\+H\+P} ()
+\begin{DoxyCompactList}\small\item\em Fetches the H\+P of the player. \end{DoxyCompactList}\item 
+void \hyperlink{classAvatar_a45c2faf4d51229d88f528d80199f1e24}{set\+H\+P} (int new\+H\+P)
+\begin{DoxyCompactList}\small\item\em Fetches the H\+P of the player. \end{DoxyCompactList}\item 
+String \hyperlink{classAvatar_a2fb302eb0410b9ccd2946ac26e93d9ca}{to\+String} ()
+\begin{DoxyCompactList}\small\item\em Gives a string representation of the player. \end{DoxyCompactList}\item 
+\hypertarget{classAvatar_a44b9098d9f26ad31b23000bb551d43cd}{}void \hyperlink{classAvatar_a44b9098d9f26ad31b23000bb551d43cd}{print} ()\label{classAvatar_a44b9098d9f26ad31b23000bb551d43cd}
+
+\begin{DoxyCompactList}\small\item\em Prints the char-\/summary to the terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classAvatar}{Avatar} is the player. 
+
+The avatar needs H\+P, inventory. More might be added. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAvatar_a7d1666c152fc18894c89952056157655}{}\index{Avatar@{Avatar}!Avatar@{Avatar}}
+\index{Avatar@{Avatar}!Avatar@{Avatar}}
+\subsubsection[{Avatar(\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Avatar.\+Avatar (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a7d1666c152fc18894c89952056157655}
+Creates the avatar. 
+\begin{DoxyParams}{Parameters}
+{\em String} & the name of the player. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAvatar_a4858e361b655a9abd4772550a33d7efd}{}\index{Avatar@{Avatar}!add\+Action@{add\+Action}}
+\index{add\+Action@{add\+Action}!Avatar@{Avatar}}
+\subsubsection[{add\+Action(int probability, int action\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Avatar.\+add\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{probability, }
+\item[{int}]{action\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a4858e361b655a9abd4772550a33d7efd}
+
+
+This function adds actions to the player. 
+
+action\+I\+Ds\+: ~\newline
+ 0 -\/ Found key 1 -\/ Found book 
+\begin{DoxyParams}{Parameters}
+{\em int} & probability that the action occurs \\
+\hline
+{\em int} & action\+I\+D which action it is, see details for all I\+Ds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAvatar_ab5d927b79ce7bd457a49380d8aa8c9cf}{}\index{Avatar@{Avatar}!discover\+Room@{discover\+Room}}
+\index{discover\+Room@{discover\+Room}!Avatar@{Avatar}}
+\subsubsection[{discover\+Room(\+Room new\+Room)}]{\setlength{\rightskip}{0pt plus 5cm}void Avatar.\+discover\+Room (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{new\+Room}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_ab5d927b79ce7bd457a49380d8aa8c9cf}
+
+
+Adds room to discovered rooms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classRoom}{Room}} & undiscovered room \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAvatar_a8ce1a94916888a549fc8315e0ba19af9}{}\index{Avatar@{Avatar}!get\+Adjacent\+Room@{get\+Adjacent\+Room}}
+\index{get\+Adjacent\+Room@{get\+Adjacent\+Room}!Avatar@{Avatar}}
+\subsubsection[{get\+Adjacent\+Room(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} Avatar.\+get\+Adjacent\+Room (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a8ce1a94916888a549fc8315e0ba19af9}
+Fetches adjacent Rooms or floors. 
+\begin{DoxyParams}{Parameters}
+{\em int} & (0=north, 1=east, 2=west, 3=south). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAvatar_a2ddc7dc9d3d84486a6364c76b2f2f925}{}\index{Avatar@{Avatar}!get\+Current\+Room@{get\+Current\+Room}}
+\index{get\+Current\+Room@{get\+Current\+Room}!Avatar@{Avatar}}
+\subsubsection[{get\+Current\+Room()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} Avatar.\+get\+Current\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a2ddc7dc9d3d84486a6364c76b2f2f925}
+Fetches the \hyperlink{classRoom}{Room} the player is currently in. \begin{DoxyReturn}{Returns}
+\hyperlink{classRoom}{Room} that the player is in. 
+\end{DoxyReturn}
+\hypertarget{classAvatar_ae639c0e572b3430f319ef5145a33ec1d}{}\index{Avatar@{Avatar}!get\+H\+P@{get\+H\+P}}
+\index{get\+H\+P@{get\+H\+P}!Avatar@{Avatar}}
+\subsubsection[{get\+H\+P()}]{\setlength{\rightskip}{0pt plus 5cm}int Avatar.\+get\+H\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_ae639c0e572b3430f319ef5145a33ec1d}
+
+
+Fetches the H\+P of the player. 
+
+\begin{DoxyReturn}{Returns}
+int H\+P of the player. 
+\end{DoxyReturn}
+\hypertarget{classAvatar_a542d84ae586f4c7ece4c9020a34d001d}{}\index{Avatar@{Avatar}!get\+Inventory@{get\+Inventory}}
+\index{get\+Inventory@{get\+Inventory}!Avatar@{Avatar}}
+\subsubsection[{get\+Inventory()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory} Avatar.\+get\+Inventory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a542d84ae586f4c7ece4c9020a34d001d}
+Fetches the player inventory \hypertarget{classAvatar_ad38c9c9193cb31f148d055c0e5f21220}{}\index{Avatar@{Avatar}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Avatar@{Avatar}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}String Avatar.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_ad38c9c9193cb31f148d055c0e5f21220}
+Fetches the name of the player. \begin{DoxyReturn}{Returns}
+String representation of the players name. 
+\end{DoxyReturn}
+\hypertarget{classAvatar_a126da75edbc8befd641c854559d2f37b}{}\index{Avatar@{Avatar}!move@{move}}
+\index{move@{move}!Avatar@{Avatar}}
+\subsubsection[{move(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}int Avatar.\+move (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a126da75edbc8befd641c854559d2f37b}
+
+
+Moves the player to a new room if it is availible. 
+
+Different states in which the function can exit\+: 0 = Successfull move in room 1 = Successfull move in elevator 2 = Unsuccessfull move, door is locked 3 = Unsuccessfull move, down while in room 4 = Unsuccessfull move, up while in room 5 = Unsuccessfull move in elevator, as room 6 = Unsuccessfull move, elevator ground floor 7 = Unsuccessfull move, elevator top floor 8 = Unsuccessfull move, out of bounds 
+\begin{DoxyParams}{Parameters}
+{\em int} & direction (0=north, 1=east, 2=west, 3=south, 4=down. 5=up). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int representing in which state the function exited. 
+\end{DoxyReturn}
+\hypertarget{classAvatar_a1936a0595cb77137f114016ddaad96eb}{}\index{Avatar@{Avatar}!set\+Current\+Room@{set\+Current\+Room}}
+\index{set\+Current\+Room@{set\+Current\+Room}!Avatar@{Avatar}}
+\subsubsection[{set\+Current\+Room(\+Room new\+Room)}]{\setlength{\rightskip}{0pt plus 5cm}void Avatar.\+set\+Current\+Room (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{new\+Room}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a1936a0595cb77137f114016ddaad96eb}
+Sets current\+Room to the one specified. 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classRoom}{Room}} & to the one specified. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAvatar_a45c2faf4d51229d88f528d80199f1e24}{}\index{Avatar@{Avatar}!set\+H\+P@{set\+H\+P}}
+\index{set\+H\+P@{set\+H\+P}!Avatar@{Avatar}}
+\subsubsection[{set\+H\+P(int new\+H\+P)}]{\setlength{\rightskip}{0pt plus 5cm}void Avatar.\+set\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+H\+P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a45c2faf4d51229d88f528d80199f1e24}
+
+
+Fetches the H\+P of the player. 
+
+\begin{DoxyReturn}{Returns}
+int H\+P of the player. 
+\end{DoxyReturn}
+\hypertarget{classAvatar_a2fb302eb0410b9ccd2946ac26e93d9ca}{}\index{Avatar@{Avatar}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Avatar@{Avatar}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}String Avatar.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAvatar_a2fb302eb0410b9ccd2946ac26e93d9ca}
+
+
+Gives a string representation of the player. 
+
+\begin{DoxyReturn}{Returns}
+String representation of the player. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Avatar.\+java\end{DoxyCompactItemize}

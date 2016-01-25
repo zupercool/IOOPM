@@ -1,0 +1,96 @@
+\hypertarget{classAction}{}\section{Action Class Reference}
+\label{classAction}\index{Action@{Action}}
+
+
+Class to handle the potential actions in each room.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAction_ac44cecf91b8611697fd5869bcce71ff3}{Action} (int percent, int id)
+\item 
+int \hyperlink{classAction_afd607ef9307a73a24ad0312f446ea359}{random\+Num} ()
+\item 
+void \hyperlink{classAction_a91259689b220c1de661b33ba88e19f7d}{set\+Probability} (int percent)
+\item 
+int \hyperlink{classAction_ae29bd65a917a4a16ba6a346773de56be}{check\+Action} ()
+\begin{DoxyCompactList}\small\item\em Checks if the action should be performed or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classAction_a52353c233ba7b04c7cd74762a4f86670}{action\+I\+D}
+\item 
+int \hyperlink{classAction_a8ce515cabf3656359a07f0b863059846}{probability} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to handle the potential actions in each room. 
+
+This class is responisible for handling the potential actions that might occur in each room. Each room will have a list of actions. Every time the player enters a room there will be a specified chance of them happening. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAction_ac44cecf91b8611697fd5869bcce71ff3}{}\index{Action@{Action}!Action@{Action}}
+\index{Action@{Action}!Action@{Action}}
+\subsubsection[{Action(int percent, int id)}]{\setlength{\rightskip}{0pt plus 5cm}Action.\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{percent, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAction_ac44cecf91b8611697fd5869bcce71ff3}
+Used to create a new action. 
+\begin{DoxyParams}{Parameters}
+{\em int} & between 0-\/100, the chance of the action occuring in percent. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAction_ae29bd65a917a4a16ba6a346773de56be}{}\index{Action@{Action}!check\+Action@{check\+Action}}
+\index{check\+Action@{check\+Action}!Action@{Action}}
+\subsubsection[{check\+Action()}]{\setlength{\rightskip}{0pt plus 5cm}int Action.\+check\+Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAction_ae29bd65a917a4a16ba6a346773de56be}
+
+
+Checks if the action should be performed or not. 
+
+\begin{DoxyReturn}{Returns}
+int -\/1 if action should not run, otherwise action\+I\+D 
+\end{DoxyReturn}
+\hypertarget{classAction_afd607ef9307a73a24ad0312f446ea359}{}\index{Action@{Action}!random\+Num@{random\+Num}}
+\index{random\+Num@{random\+Num}!Action@{Action}}
+\subsubsection[{random\+Num()}]{\setlength{\rightskip}{0pt plus 5cm}int Action.\+random\+Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAction_afd607ef9307a73a24ad0312f446ea359}
+Random generator for action-\/probability \hypertarget{classAction_a91259689b220c1de661b33ba88e19f7d}{}\index{Action@{Action}!set\+Probability@{set\+Probability}}
+\index{set\+Probability@{set\+Probability}!Action@{Action}}
+\subsubsection[{set\+Probability(int percent)}]{\setlength{\rightskip}{0pt plus 5cm}void Action.\+set\+Probability (
+\begin{DoxyParamCaption}
+\item[{int}]{percent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classAction_a91259689b220c1de661b33ba88e19f7d}
+Sets a new probability 
+\begin{DoxyParams}{Parameters}
+{\em int} & the new probability in percent (0-\/100) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classAction_a52353c233ba7b04c7cd74762a4f86670}{}\index{Action@{Action}!action\+I\+D@{action\+I\+D}}
+\index{action\+I\+D@{action\+I\+D}!Action@{Action}}
+\subsubsection[{action\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int Action.\+action\+I\+D\hspace{0.3cm}{\ttfamily [protected]}}\label{classAction_a52353c233ba7b04c7cd74762a4f86670}
+The id of the action. \hypertarget{classAction_a8ce515cabf3656359a07f0b863059846}{}\index{Action@{Action}!probability@{probability}}
+\index{probability@{probability}!Action@{Action}}
+\subsubsection[{probability}]{\setlength{\rightskip}{0pt plus 5cm}int Action.\+probability = 0\hspace{0.3cm}{\ttfamily [protected]}}\label{classAction_a8ce515cabf3656359a07f0b863059846}
+The probability that an action occur. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Action.\+java\end{DoxyCompactItemize}

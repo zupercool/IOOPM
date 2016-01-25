@@ -1,0 +1,380 @@
+\hypertarget{classRoom}{}\section{Room Class Reference}
+\label{classRoom}\index{Room@{Room}}
+
+
+The Room-\/class managing all the functions related to the rooms.  
+
+
+Inheritance diagram for Room\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRoom}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRoom_ae162f5cbb105a45bb5b72adcccfd250f}{Room} (String \hyperlink{classRoom_a30e9fb0290f64b567572d2f4b4fac4d9}{name}, String \hyperlink{classRoom_a2f0c64fd0d90618f9c36b935a6f6bb49}{currently}, String \hyperlink{classRoom_ad9e86528519166f3ac3b1413da4e0a41}{heading})
+\begin{DoxyCompactList}\small\item\em Creates a room. \end{DoxyCompactList}\item 
+void \hyperlink{classRoom_af82990e218a9dced9c6226b0083bfb8a}{connect} (\hyperlink{classRoom}{Room} n, \hyperlink{classRoom}{Room} e, \hyperlink{classRoom}{Room} w, \hyperlink{classRoom}{Room} s)
+\item 
+void \hyperlink{classRoom_a074e41e5dbc41dd4a71cac2a101c1f56}{set\+Locks} (boolean n, boolean e, boolean w, boolean s)
+\item 
+String \hyperlink{classRoom_aa0c9b6ddd98d29a9cc4e31c6c66a8ea4}{grammer\+Currently} ()
+\item 
+String \hyperlink{classRoom_a8d2578df19ba7b0d5c76c9567aba83df}{grammer\+Heading} ()
+\item 
+String \hyperlink{classRoom_ab638bfd4155075a97e6d3ec306b467f0}{get\+Name} ()
+\item 
+void \hyperlink{classRoom_adefdb50c618b7d7d91fb2025eefc39e0}{set\+Desc} (String desc)
+\item 
+String \hyperlink{classRoom_ad0996a895179c9ba712e5be94534e58e}{get\+Desc} ()
+\item 
+void \hyperlink{classRoom_ac6f911c07206b270b6d821f0b9a67a01}{add\+Npc} (\hyperlink{classNPC}{N\+P\+C} npc)
+\item 
+List$<$ \hyperlink{classNPC}{N\+P\+C} $>$ \hyperlink{classRoom_a0c5b0189a4149e963ac93965acbf8088}{get\+Npc\+List} ()
+\item 
+String \hyperlink{classRoom_a74ac6cc2152ba812702258b9c4fd70db}{get\+N\+P\+C} (int index)
+\begin{DoxyCompactList}\small\item\em Fetches a npc at index. \end{DoxyCompactList}\item 
+boolean \hyperlink{classRoom_aff32fa2f3e836c00921e18408a432a0d}{is\+Adjacent\+Unlocked} (int cardinal)
+\item 
+void \hyperlink{classRoom_ace2ee11dd317462ad17dc457109a30f5}{unlock\+Door} (int cardinal)
+\item 
+\hyperlink{classRoom}{Room} \hyperlink{classRoom_ae10de76a88deb65efbbcd42d1557da68}{get\+Adjacent\+Room} (int cardinal)
+\item 
+void \hyperlink{classRoom_ab5fed82dacde130f70941779b0b6c7fb}{add\+Action} (int probability, int action\+I\+D)
+\begin{DoxyCompactList}\small\item\em This function adds actions to the room. \end{DoxyCompactList}\item 
+void \hyperlink{classRoom_acf497ba6df7779bfbc4786dd069d84ef}{check\+Actions} ()
+\item 
+void \hyperlink{classRoom_a17dc052da1d8f76adf886352d3523d9f}{run\+Action} (int action\+I\+D)
+\begin{DoxyCompactList}\small\item\em This function fetches the right function based on the action\+I\+D. \end{DoxyCompactList}\item 
+boolean \hyperlink{classRoom_aef1fd9dd031e99eb01947603bca26918}{is\+An\+Elevator} ()
+\item 
+boolean \hyperlink{classRoom_a2d753b78a122a29c0a6bf9da4fd2dd6b}{equals} (\hyperlink{classRoom}{Room} comp)
+\item 
+String \hyperlink{classRoom_a257d76391ce0c9999151358143855a84}{to\+String} ()
+\item 
+void \hyperlink{classRoom_ad090e030e50a028019930016932789eb}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classRoom_a30e9fb0290f64b567572d2f4b4fac4d9}{name}
+\item 
+String \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description}
+\item 
+String \hyperlink{classRoom_a2f0c64fd0d90618f9c36b935a6f6bb49}{currently}
+\item 
+String \hyperlink{classRoom_ad9e86528519166f3ac3b1413da4e0a41}{heading}
+\item 
+boolean \hyperlink{classRoom_a9ae4a56ee28e7e6cae000555032a8e41}{is\+An\+Elevator} = false
+\item 
+List$<$ \hyperlink{classRoom}{Room} $>$ \hyperlink{classRoom_a9d060d005fd9719f87f5045656fdf7f0}{adjacent\+Rooms} = new Linked\+List$<$\hyperlink{classRoom}{Room}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Room-\/class managing all the functions related to the rooms. 
+
+Each room will contain different objects and npcs that the Game-\/class can fetch by using functions from this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRoom_ae162f5cbb105a45bb5b72adcccfd250f}{}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room(\+String name, String currently, String heading)}]{\setlength{\rightskip}{0pt plus 5cm}Room.\+Room (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{String}]{currently, }
+\item[{String}]{heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ae162f5cbb105a45bb5b72adcccfd250f}
+
+
+Creates a room. 
+
+Should take rooms in all four cardinals (north, south, etc) as arguments. 
+\begin{DoxyParams}{Parameters}
+{\em String} & the name of the new room in the form of a String. \\
+\hline
+{\em String} & the correct words to connect name to \char`\"{}you are currently $<$name$>$\char`\"{} \\
+\hline
+{\em String} & the correct words to connect name to \char`\"{}you are heading $<$name$>$\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRoom_ab5fed82dacde130f70941779b0b6c7fb}{}\index{Room@{Room}!add\+Action@{add\+Action}}
+\index{add\+Action@{add\+Action}!Room@{Room}}
+\subsubsection[{add\+Action(int probability, int action\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+add\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{probability, }
+\item[{int}]{action\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ab5fed82dacde130f70941779b0b6c7fb}
+
+
+This function adds actions to the room. 
+
+action\+I\+Ds\+: ~\newline
+ 0 -\/ Found key 
+\begin{DoxyParams}{Parameters}
+{\em int} & probability that the action occurs \\
+\hline
+{\em int} & action\+I\+D which action it is, see details for all I\+Ds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_ac6f911c07206b270b6d821f0b9a67a01}{}\index{Room@{Room}!add\+Npc@{add\+Npc}}
+\index{add\+Npc@{add\+Npc}!Room@{Room}}
+\subsubsection[{add\+Npc(\+N\+P\+C npc)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+add\+Npc (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C}}]{npc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ac6f911c07206b270b6d821f0b9a67a01}
+Adds an \hyperlink{classNPC}{N\+P\+C} to the room. \hypertarget{classRoom_acf497ba6df7779bfbc4786dd069d84ef}{}\index{Room@{Room}!check\+Actions@{check\+Actions}}
+\index{check\+Actions@{check\+Actions}!Room@{Room}}
+\subsubsection[{check\+Actions()}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+check\+Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_acf497ba6df7779bfbc4786dd069d84ef}
+This checks and runs the rooms actions \hypertarget{classRoom_af82990e218a9dced9c6226b0083bfb8a}{}\index{Room@{Room}!connect@{connect}}
+\index{connect@{connect}!Room@{Room}}
+\subsubsection[{connect(\+Room n, Room e, Room w, Room s)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{n, }
+\item[{{\bf Room}}]{e, }
+\item[{{\bf Room}}]{w, }
+\item[{{\bf Room}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_af82990e218a9dced9c6226b0083bfb8a}
+Connects the room to other rooms. 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classRoom}{Room}} & n (North) \\
+\hline
+{\em \hyperlink{classRoom}{Room}} & e (East) \\
+\hline
+{\em \hyperlink{classRoom}{Room}} & w (West) \\
+\hline
+{\em \hyperlink{classRoom}{Room}} & s (South) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_a2d753b78a122a29c0a6bf9da4fd2dd6b}{}\index{Room@{Room}!equals@{equals}}
+\index{equals@{equals}!Room@{Room}}
+\subsubsection[{equals(\+Room comp)}]{\setlength{\rightskip}{0pt plus 5cm}boolean Room.\+equals (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{comp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a2d753b78a122a29c0a6bf9da4fd2dd6b}
+Function used to compare rooms 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classRoom}{Room}} & to compare with \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_ae10de76a88deb65efbbcd42d1557da68}{}\index{Room@{Room}!get\+Adjacent\+Room@{get\+Adjacent\+Room}}
+\index{get\+Adjacent\+Room@{get\+Adjacent\+Room}!Room@{Room}}
+\subsubsection[{get\+Adjacent\+Room(int cardinal)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} Room.\+get\+Adjacent\+Room (
+\begin{DoxyParamCaption}
+\item[{int}]{cardinal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ae10de76a88deb65efbbcd42d1557da68}
+Fetches the connected room at cardinal. 
+\begin{DoxyParams}{Parameters}
+{\em int} & (0=North, 1=East, 2=West, 3=South) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_ad0996a895179c9ba712e5be94534e58e}{}\index{Room@{Room}!get\+Desc@{get\+Desc}}
+\index{get\+Desc@{get\+Desc}!Room@{Room}}
+\subsubsection[{get\+Desc()}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+get\+Desc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ad0996a895179c9ba712e5be94534e58e}
+Gets the description of a room. \begin{DoxyReturn}{Returns}
+String description of the room. 
+\end{DoxyReturn}
+\hypertarget{classRoom_ab638bfd4155075a97e6d3ec306b467f0}{}\index{Room@{Room}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Room@{Room}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ab638bfd4155075a97e6d3ec306b467f0}
+Gets the name of a room. \begin{DoxyReturn}{Returns}
+String name of the room. 
+\end{DoxyReturn}
+\hypertarget{classRoom_a74ac6cc2152ba812702258b9c4fd70db}{}\index{Room@{Room}!get\+N\+P\+C@{get\+N\+P\+C}}
+\index{get\+N\+P\+C@{get\+N\+P\+C}!Room@{Room}}
+\subsubsection[{get\+N\+P\+C(int index)}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+get\+N\+P\+C (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a74ac6cc2152ba812702258b9c4fd70db}
+
+
+Fetches a npc at index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Index of the npc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String the \hyperlink{classNPC}{N\+P\+C} if it\textquotesingle{}s in range, otherwise null 
+\end{DoxyReturn}
+\hypertarget{classRoom_a0c5b0189a4149e963ac93965acbf8088}{}\index{Room@{Room}!get\+Npc\+List@{get\+Npc\+List}}
+\index{get\+Npc\+List@{get\+Npc\+List}!Room@{Room}}
+\subsubsection[{get\+Npc\+List()}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf N\+P\+C}$>$ Room.\+get\+Npc\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a0c5b0189a4149e963ac93965acbf8088}
+Gets a list of the N\+P\+Cs in the room. \hypertarget{classRoom_aa0c9b6ddd98d29a9cc4e31c6c66a8ea4}{}\index{Room@{Room}!grammer\+Currently@{grammer\+Currently}}
+\index{grammer\+Currently@{grammer\+Currently}!Room@{Room}}
+\subsubsection[{grammer\+Currently()}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+grammer\+Currently (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_aa0c9b6ddd98d29a9cc4e31c6c66a8ea4}
+Gets the grammer for currently $<$room$>$. \begin{DoxyReturn}{Returns}
+String grammer. 
+\end{DoxyReturn}
+\hypertarget{classRoom_a8d2578df19ba7b0d5c76c9567aba83df}{}\index{Room@{Room}!grammer\+Heading@{grammer\+Heading}}
+\index{grammer\+Heading@{grammer\+Heading}!Room@{Room}}
+\subsubsection[{grammer\+Heading()}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+grammer\+Heading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a8d2578df19ba7b0d5c76c9567aba83df}
+Gets the grammer for heading $<$room$>$. \begin{DoxyReturn}{Returns}
+String grammer. 
+\end{DoxyReturn}
+\hypertarget{classRoom_aff32fa2f3e836c00921e18408a432a0d}{}\index{Room@{Room}!is\+Adjacent\+Unlocked@{is\+Adjacent\+Unlocked}}
+\index{is\+Adjacent\+Unlocked@{is\+Adjacent\+Unlocked}!Room@{Room}}
+\subsubsection[{is\+Adjacent\+Unlocked(int cardinal)}]{\setlength{\rightskip}{0pt plus 5cm}boolean Room.\+is\+Adjacent\+Unlocked (
+\begin{DoxyParamCaption}
+\item[{int}]{cardinal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_aff32fa2f3e836c00921e18408a432a0d}
+Asks if a certain door is locked. 
+\begin{DoxyParams}{Parameters}
+{\em int} & (0=North, 1=East, 2=West, 3=South). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean true means unlocked, false means locked. 
+\end{DoxyReturn}
+\hypertarget{classRoom_aef1fd9dd031e99eb01947603bca26918}{}\index{Room@{Room}!is\+An\+Elevator@{is\+An\+Elevator}}
+\index{is\+An\+Elevator@{is\+An\+Elevator}!Room@{Room}}
+\subsubsection[{is\+An\+Elevator()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Room.\+is\+An\+Elevator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_aef1fd9dd031e99eb01947603bca26918}
+Function to check if room is an elevator or not \begin{DoxyReturn}{Returns}
+boolean true if it is an elevator 
+\end{DoxyReturn}
+\hypertarget{classRoom_ad090e030e50a028019930016932789eb}{}\index{Room@{Room}!print@{print}}
+\index{print@{print}!Room@{Room}}
+\subsubsection[{print()}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ad090e030e50a028019930016932789eb}
+Prints the position-\/summary to the terminal. \hypertarget{classRoom_a17dc052da1d8f76adf886352d3523d9f}{}\index{Room@{Room}!run\+Action@{run\+Action}}
+\index{run\+Action@{run\+Action}!Room@{Room}}
+\subsubsection[{run\+Action(int action\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+run\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{action\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a17dc052da1d8f76adf886352d3523d9f}
+
+
+This function fetches the right function based on the action\+I\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & action\+I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_adefdb50c618b7d7d91fb2025eefc39e0}{}\index{Room@{Room}!set\+Desc@{set\+Desc}}
+\index{set\+Desc@{set\+Desc}!Room@{Room}}
+\subsubsection[{set\+Desc(\+String desc)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+set\+Desc (
+\begin{DoxyParamCaption}
+\item[{String}]{desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_adefdb50c618b7d7d91fb2025eefc39e0}
+Gives a description to the room. 
+\begin{DoxyParams}{Parameters}
+{\em String} & description of the room. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_a074e41e5dbc41dd4a71cac2a101c1f56}{}\index{Room@{Room}!set\+Locks@{set\+Locks}}
+\index{set\+Locks@{set\+Locks}!Room@{Room}}
+\subsubsection[{set\+Locks(boolean n, boolean e, boolean w, boolean s)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+set\+Locks (
+\begin{DoxyParamCaption}
+\item[{boolean}]{n, }
+\item[{boolean}]{e, }
+\item[{boolean}]{w, }
+\item[{boolean}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a074e41e5dbc41dd4a71cac2a101c1f56}
+Sets the state of the doors in the room to locked or unlocked. \{North, East, West, North\} 
+\begin{DoxyParams}{Parameters}
+{\em boolean} & n for north door \\
+\hline
+{\em boolean} & e for east door \\
+\hline
+{\em boolean} & w for west door \\
+\hline
+{\em boolean} & s for south door \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRoom_a257d76391ce0c9999151358143855a84}{}\index{Room@{Room}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Room@{Room}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_a257d76391ce0c9999151358143855a84}
+Makes a string of a room. \begin{DoxyReturn}{Returns}
+String representation of a room. 
+\end{DoxyReturn}
+\hypertarget{classRoom_ace2ee11dd317462ad17dc457109a30f5}{}\index{Room@{Room}!unlock\+Door@{unlock\+Door}}
+\index{unlock\+Door@{unlock\+Door}!Room@{Room}}
+\subsubsection[{unlock\+Door(int cardinal)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+unlock\+Door (
+\begin{DoxyParamCaption}
+\item[{int}]{cardinal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRoom_ace2ee11dd317462ad17dc457109a30f5}
+Unlocks the door at cardinal. 
+\begin{DoxyParams}{Parameters}
+{\em int} & (0=North, 1=East, 2=West, 3=South) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classRoom_a9d060d005fd9719f87f5045656fdf7f0}{}\index{Room@{Room}!adjacent\+Rooms@{adjacent\+Rooms}}
+\index{adjacent\+Rooms@{adjacent\+Rooms}!Room@{Room}}
+\subsubsection[{adjacent\+Rooms}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Room}$>$ Room.\+adjacent\+Rooms = new Linked\+List$<${\bf Room}$>$()\hspace{0.3cm}{\ttfamily [protected]}}\label{classRoom_a9d060d005fd9719f87f5045656fdf7f0}
+The adjacent rooms (0=north, 1=east, 2=west, 3=south). \hypertarget{classRoom_a2f0c64fd0d90618f9c36b935a6f6bb49}{}\index{Room@{Room}!currently@{currently}}
+\index{currently@{currently}!Room@{Room}}
+\subsubsection[{currently}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+currently\hspace{0.3cm}{\ttfamily [protected]}}\label{classRoom_a2f0c64fd0d90618f9c36b935a6f6bb49}
+Grammer for using it in sentances. \hypertarget{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{}\index{Room@{Room}!description@{description}}
+\index{description@{description}!Room@{Room}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+description\hspace{0.3cm}{\ttfamily [protected]}}\label{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}
+A short description of the room. \hypertarget{classRoom_ad9e86528519166f3ac3b1413da4e0a41}{}\index{Room@{Room}!heading@{heading}}
+\index{heading@{heading}!Room@{Room}}
+\subsubsection[{heading}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+heading\hspace{0.3cm}{\ttfamily [protected]}}\label{classRoom_ad9e86528519166f3ac3b1413da4e0a41}
+Grammer for using it in sentances. \hypertarget{classRoom_a9ae4a56ee28e7e6cae000555032a8e41}{}\index{Room@{Room}!is\+An\+Elevator@{is\+An\+Elevator}}
+\index{is\+An\+Elevator@{is\+An\+Elevator}!Room@{Room}}
+\subsubsection[{is\+An\+Elevator}]{\setlength{\rightskip}{0pt plus 5cm}boolean Room.\+is\+An\+Elevator = false\hspace{0.3cm}{\ttfamily [protected]}}\label{classRoom_a9ae4a56ee28e7e6cae000555032a8e41}
+Determines if the room is an elevator or not \hypertarget{classRoom_a30e9fb0290f64b567572d2f4b4fac4d9}{}\index{Room@{Room}!name@{name}}
+\index{name@{name}!Room@{Room}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\+name\hspace{0.3cm}{\ttfamily [protected]}}\label{classRoom_a30e9fb0290f64b567572d2f4b4fac4d9}
+The name of the room. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Room.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,316 @@
+\hypertarget{classTXTReader}{}\section{T\+X\+T\+Reader Class Reference}
+\label{classTXTReader}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+
+
+The class responisible for handling course info found in txt files.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classTXTReader_a0192ce4884c215947120fabf9e4f7d97}{get\+Lines\+File} (String txt\+File)
+\begin{DoxyCompactList}\small\item\em Gets how many books the course has. \end{DoxyCompactList}\item 
+static int \hyperlink{classTXTReader_a5b841b6280e72959bded19fa507e2385}{get\+Courses\+Amount} ()
+\begin{DoxyCompactList}\small\item\em Gets the amount of courses. \end{DoxyCompactList}\item 
+\hypertarget{classTXTReader_ae4c57bb2c5f7eb7569bf41b0989d4a8d}{}static \hyperlink{classCourse}{Course} \hyperlink{classTXTReader_ae4c57bb2c5f7eb7569bf41b0989d4a8d}{create\+Random\+Course} ()\label{classTXTReader_ae4c57bb2c5f7eb7569bf41b0989d4a8d}
+
+\begin{DoxyCompactList}\small\item\em Creates a random course  a new random course. \end{DoxyCompactList}\item 
+static int \hyperlink{classTXTReader_aa50e32bac584af6a1cd909c15261d313}{get\+Course\+Book\+Amount} (int course\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets how many books the course has. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_a11d27a0cb164ad919af7ce311e891979}{get\+Course\+Name} (int course\+I\+D)
+\begin{DoxyCompactList}\small\item\em Fetches the name of the course bound to the provided id. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_ac3d0b99bc3ead4160cc94d3a418b3097}{get\+Course\+H\+P} (int course\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets the courses H\+P value. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_aa0408f4283bdcb82f45a2147fb38faac}{get\+Course\+Book\+File} (int course\+I\+D)
+\begin{DoxyCompactList}\small\item\em Fetches the name of the \hyperlink{classBook}{Book} txt-\/file for the course. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_a420d2835e023f7f0d854a7b64abe6995}{get\+Prof\+Name\+File} (int course\+I\+D)
+\begin{DoxyCompactList}\small\item\em Fetches the name of the \hyperlink{classProfessor}{Professor} txt-\/\+File for the course. \end{DoxyCompactList}\item 
+\hypertarget{classTXTReader_a75d2e79aa94ebe63749d7806dcf9aa60}{}static void \hyperlink{classTXTReader_a75d2e79aa94ebe63749d7806dcf9aa60}{print\+Course} (int course\+I\+D)\label{classTXTReader_a75d2e79aa94ebe63749d7806dcf9aa60}
+
+\begin{DoxyCompactList}\small\item\em Prints the course. \end{DoxyCompactList}\item 
+static int \hyperlink{classTXTReader_a0259986abc13a647e9993a81b411c88e}{random\+Num} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Random generator for action-\/probability. \end{DoxyCompactList}\item 
+\hypertarget{classTXTReader_ad93e1af501d95cc21916efee0a641968}{}static \hyperlink{classProfessor}{Professor} \hyperlink{classTXTReader_ad93e1af501d95cc21916efee0a641968}{create\+Random\+Prof} ()\label{classTXTReader_ad93e1af501d95cc21916efee0a641968}
+
+\begin{DoxyCompactList}\small\item\em Created a professor with a random name. \end{DoxyCompactList}\item 
+static int \hyperlink{classTXTReader_a18295e9e805a64f52a8b164f0698d2a5}{get\+Course\+Prof\+Amount} (int course\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets the amount of lines in the \hyperlink{classProfessor}{Professor} txt-\/file. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_a2d77be92793ade8320fddd1c2cd978fe}{get\+Prof\+Name} (int course\+I\+D, int name\+I\+D)
+\begin{DoxyCompactList}\small\item\em Fetches a name from the \hyperlink{classProfessor}{Professor} txt-\/file. \end{DoxyCompactList}\item 
+\hypertarget{classTXTReader_ab9a5af64c8939de376aa520d10c55d9a}{}static \hyperlink{classBook}{Book} \hyperlink{classTXTReader_ab9a5af64c8939de376aa520d10c55d9a}{create\+Random\+Book} ()\label{classTXTReader_ab9a5af64c8939de376aa520d10c55d9a}
+
+\begin{DoxyCompactList}\small\item\em Creates a random book from a random course. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_a59c8c95a6436b27076bc57c123db3c63}{get\+Book\+Name} (int course\+I\+D, int book\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets the name of the book specified by the provided index. \end{DoxyCompactList}\item 
+static String \hyperlink{classTXTReader_a595b7f527438b44072b25de0410170fd}{get\+Book\+Author} (int course\+I\+D, int book\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets the name of the author to the book specified by the provided index. \end{DoxyCompactList}\item 
+static int \hyperlink{classTXTReader_aaca34258d8e4a8370e5bb58b497bb8bc}{get\+Book\+Year} (int course\+I\+D, int book\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets the year when the book was published. \end{DoxyCompactList}\item 
+static int \hyperlink{classTXTReader_a5c3b8e4474da76fcf6cfe46434c71d29}{get\+Book\+Size} (int course\+I\+D, int book\+I\+D)
+\begin{DoxyCompactList}\small\item\em Gets the size of the book in litres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class responisible for handling course info found in txt files. 
+
+The courses all have their own id as well as books with their id. The I\+Ds are\+: 1 = Kaffetermos Dynamic 2 = Zombieanatomi 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTXTReader_a595b7f527438b44072b25de0410170fd}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Book\+Author@{get\+Book\+Author}}
+\index{get\+Book\+Author@{get\+Book\+Author}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Book\+Author(int course\+I\+D, int book\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Book\+Author (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D, }
+\item[{int}]{book\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a595b7f527438b44072b25de0410170fd}
+
+
+Gets the name of the author to the book specified by the provided index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course the book is bound to \\
+\hline
+{\em int} & Id of the book \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_a59c8c95a6436b27076bc57c123db3c63}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Book\+Name@{get\+Book\+Name}}
+\index{get\+Book\+Name@{get\+Book\+Name}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Book\+Name(int course\+I\+D, int book\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Book\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D, }
+\item[{int}]{book\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a59c8c95a6436b27076bc57c123db3c63}
+
+
+Gets the name of the book specified by the provided index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course the book is bound to \\
+\hline
+{\em int} & Id of the book \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_a5c3b8e4474da76fcf6cfe46434c71d29}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Book\+Size@{get\+Book\+Size}}
+\index{get\+Book\+Size@{get\+Book\+Size}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Book\+Size(int course\+I\+D, int book\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+get\+Book\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D, }
+\item[{int}]{book\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a5c3b8e4474da76fcf6cfe46434c71d29}
+
+
+Gets the size of the book in litres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course the book is bound to \\
+\hline
+{\em int} & Id of the book \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_aaca34258d8e4a8370e5bb58b497bb8bc}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Book\+Year@{get\+Book\+Year}}
+\index{get\+Book\+Year@{get\+Book\+Year}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Book\+Year(int course\+I\+D, int book\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+get\+Book\+Year (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D, }
+\item[{int}]{book\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_aaca34258d8e4a8370e5bb58b497bb8bc}
+
+
+Gets the year when the book was published. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course the book is bound to \\
+\hline
+{\em int} & Id of the book \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_aa50e32bac584af6a1cd909c15261d313}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Course\+Book\+Amount@{get\+Course\+Book\+Amount}}
+\index{get\+Course\+Book\+Amount@{get\+Course\+Book\+Amount}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Course\+Book\+Amount(int course\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+get\+Course\+Book\+Amount (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_aa50e32bac584af6a1cd909c15261d313}
+
+
+Gets how many books the course has. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of books bound the course 
+\end{DoxyReturn}
+\hypertarget{classTXTReader_aa0408f4283bdcb82f45a2147fb38faac}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Course\+Book\+File@{get\+Course\+Book\+File}}
+\index{get\+Course\+Book\+File@{get\+Course\+Book\+File}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Course\+Book\+File(int course\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Course\+Book\+File (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_aa0408f4283bdcb82f45a2147fb38faac}
+
+
+Fetches the name of the \hyperlink{classBook}{Book} txt-\/file for the course. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_ac3d0b99bc3ead4160cc94d3a418b3097}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Course\+H\+P@{get\+Course\+H\+P}}
+\index{get\+Course\+H\+P@{get\+Course\+H\+P}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Course\+H\+P(int course\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Course\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_ac3d0b99bc3ead4160cc94d3a418b3097}
+
+
+Gets the courses H\+P value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_a11d27a0cb164ad919af7ce311e891979}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Course\+Name@{get\+Course\+Name}}
+\index{get\+Course\+Name@{get\+Course\+Name}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Course\+Name(int course\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Course\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a11d27a0cb164ad919af7ce311e891979}
+
+
+Fetches the name of the course bound to the provided id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Id of the course \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_a18295e9e805a64f52a8b164f0698d2a5}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Course\+Prof\+Amount@{get\+Course\+Prof\+Amount}}
+\index{get\+Course\+Prof\+Amount@{get\+Course\+Prof\+Amount}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Course\+Prof\+Amount(int course\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+get\+Course\+Prof\+Amount (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a18295e9e805a64f52a8b164f0698d2a5}
+
+
+Gets the amount of lines in the \hyperlink{classProfessor}{Professor} txt-\/file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & I\+D of the course \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The amount of names in the \hyperlink{classProfessor}{Professor} txt-\/file 
+\end{DoxyReturn}
+\hypertarget{classTXTReader_a5b841b6280e72959bded19fa507e2385}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Courses\+Amount@{get\+Courses\+Amount}}
+\index{get\+Courses\+Amount@{get\+Courses\+Amount}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Courses\+Amount()}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+get\+Courses\+Amount (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a5b841b6280e72959bded19fa507e2385}
+
+
+Gets the amount of courses. 
+
+\begin{DoxyReturn}{Returns}
+int Number of courses in course\+\_\+txt 
+\end{DoxyReturn}
+\hypertarget{classTXTReader_a0192ce4884c215947120fabf9e4f7d97}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Lines\+File@{get\+Lines\+File}}
+\index{get\+Lines\+File@{get\+Lines\+File}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Lines\+File(\+String txt\+File)}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+get\+Lines\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{txt\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a0192ce4884c215947120fabf9e4f7d97}
+
+
+Gets how many books the course has. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt\+File} & is the file to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of lines in the file 
+\end{DoxyReturn}
+\hypertarget{classTXTReader_a2d77be92793ade8320fddd1c2cd978fe}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Prof\+Name@{get\+Prof\+Name}}
+\index{get\+Prof\+Name@{get\+Prof\+Name}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Prof\+Name(int course\+I\+D, int name\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Prof\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D, }
+\item[{int}]{name\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a2d77be92793ade8320fddd1c2cd978fe}
+
+
+Fetches a name from the \hyperlink{classProfessor}{Professor} txt-\/file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & index of the names \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String the name 
+\end{DoxyReturn}
+\hypertarget{classTXTReader_a420d2835e023f7f0d854a7b64abe6995}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!get\+Prof\+Name\+File@{get\+Prof\+Name\+File}}
+\index{get\+Prof\+Name\+File@{get\+Prof\+Name\+File}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{get\+Prof\+Name\+File(int course\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static String T\+X\+T\+Reader.\+get\+Prof\+Name\+File (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a420d2835e023f7f0d854a7b64abe6995}
+
+
+Fetches the name of the \hyperlink{classProfessor}{Professor} txt-\/\+File for the course. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & I\+D of the course \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTXTReader_a0259986abc13a647e9993a81b411c88e}{}\index{T\+X\+T\+Reader@{T\+X\+T\+Reader}!random\+Num@{random\+Num}}
+\index{random\+Num@{random\+Num}!T\+X\+T\+Reader@{T\+X\+T\+Reader}}
+\subsubsection[{random\+Num(int min, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static int T\+X\+T\+Reader.\+random\+Num (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classTXTReader_a0259986abc13a647e9993a81b411c88e}
+
+
+Random generator for action-\/probability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & min is the minimum possible outcome \\
+\hline
+{\em int} & max is the maximum possible outcome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Random int between min and max 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+T\+X\+T\+Reader.\+java\end{DoxyCompactItemize}

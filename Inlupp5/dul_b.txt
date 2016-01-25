@@ -1,0 +1,3 @@
+0;Lerans Konsistens och Smak;Tore Piran;1989;2
+1;Lerfiske;Halwar Nordfjord;1990;3
+2;Telekenis Drejjning;Zarcko Flux;2090;1

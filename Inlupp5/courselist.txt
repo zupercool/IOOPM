@@ -1,0 +1,9 @@
+0;Kaffetermos Dynamic;10;ktd
+1;Zombieanatomi 101;20;za
+2;Bokstavsartitektur;15;ba
+3;Julklappsidentifiering;20;jki
+4;Ioopm;20;iop
+5;Drejning Utan Lera;5;dul
+6;Fashion for Pets;10;ffp
+7;Create Your Own Phobia;15;cup
+8;Linear Fotyoga;5;lfy

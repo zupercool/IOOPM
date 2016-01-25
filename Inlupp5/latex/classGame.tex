@@ -1,0 +1,144 @@
+\hypertarget{classGame}{}\section{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+The Game-\/class is responisible for the runtime of the game, taking player inputs and updating the world.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classGame_a612ca57db4b230ac5d927e72519ea571}{S\+E\+P\+A\+R\+A\+T\+O\+R} (int i)
+\item 
+static void \hyperlink{classGame_a98681c889936305d2ffbc2c368e73c88}{create\+Player} ()
+\item 
+static void \hyperlink{classGame_abb39f1316ab523fbcda8a5ba115927f6}{get\+Help} ()
+\item 
+static void \hyperlink{classGame_a53324252827f9f298f67ee4c46675029}{quit\+Action} ()
+\item 
+static void \hyperlink{classGame_a082940112ca18cad8c195c1da0bf4af3}{game\+Status} ()
+\item 
+static void \hyperlink{classGame_a730e4053e3dbc100c3bc54bb18d20afd}{move\+Action} (int direction)
+\begin{DoxyCompactList}\small\item\em Handles movement of the player. \end{DoxyCompactList}\item 
+static void \hyperlink{classGame_abe6ec2322cdfa5005ccccd8b07d789fe}{unlock\+Action} (int direction)
+\begin{DoxyCompactList}\small\item\em Handles the unlocking of doors. \end{DoxyCompactList}\item 
+static void \hyperlink{classGame_a471f2605a676fc54b9b7b6f2d1b628bf}{drop\+Action} (int index)
+\begin{DoxyCompactList}\small\item\em handles the dropping of items from player inventory \end{DoxyCompactList}\item 
+\hypertarget{classGame_afd5edfadde47ff28830341b56a7112c1}{}static void \hyperlink{classGame_afd5edfadde47ff28830341b56a7112c1}{people\+Action} ()\label{classGame_afd5edfadde47ff28830341b56a7112c1}
+
+\begin{DoxyCompactList}\small\item\em Handles interactions with people in the \hyperlink{classRoom}{Room}. \end{DoxyCompactList}\item 
+\hypertarget{classGame_ae52595a27ac1b327b05db2129ad81fca}{}static void {\bfseries main} (String\mbox{[}$\,$\mbox{]} args)\label{classGame_ae52595a27ac1b327b05db2129ad81fca}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Game-\/class is responisible for the runtime of the game, taking player inputs and updating the world. 
+
+This class will handle the inputs and the continues updates to the world during runtime. When it exits the game exits. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classGame_a98681c889936305d2ffbc2c368e73c88}{}\index{Game@{Game}!create\+Player@{create\+Player}}
+\index{create\+Player@{create\+Player}!Game@{Game}}
+\subsubsection[{create\+Player()}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+create\+Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_a98681c889936305d2ffbc2c368e73c88}
+Character creation \hypertarget{classGame_a471f2605a676fc54b9b7b6f2d1b628bf}{}\index{Game@{Game}!drop\+Action@{drop\+Action}}
+\index{drop\+Action@{drop\+Action}!Game@{Game}}
+\subsubsection[{drop\+Action(int index)}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+drop\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_a471f2605a676fc54b9b7b6f2d1b628bf}
+
+
+handles the dropping of items from player inventory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Index of the item you wish to drop. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGame_a082940112ca18cad8c195c1da0bf4af3}{}\index{Game@{Game}!game\+Status@{game\+Status}}
+\index{game\+Status@{game\+Status}!Game@{Game}}
+\subsubsection[{game\+Status()}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+game\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_a082940112ca18cad8c195c1da0bf4af3}
+Prints the status of the game to the std-\/output \hypertarget{classGame_abb39f1316ab523fbcda8a5ba115927f6}{}\index{Game@{Game}!get\+Help@{get\+Help}}
+\index{get\+Help@{get\+Help}!Game@{Game}}
+\subsubsection[{get\+Help()}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+get\+Help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_abb39f1316ab523fbcda8a5ba115927f6}
+Prints the help-\/section of the game to the terminal. \hypertarget{classGame_a730e4053e3dbc100c3bc54bb18d20afd}{}\index{Game@{Game}!move\+Action@{move\+Action}}
+\index{move\+Action@{move\+Action}!Game@{Game}}
+\subsubsection[{move\+Action(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+move\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_a730e4053e3dbc100c3bc54bb18d20afd}
+
+
+Handles movement of the player. 
+
+The directions are\+:~\newline
+ 0=North ~\newline
+ 1=East ~\newline
+ 2=West ~\newline
+ 3=South ~\newline
+ 4=Down ~\newline
+ 5=Up ~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em int} & representing a direction () \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGame_a53324252827f9f298f67ee4c46675029}{}\index{Game@{Game}!quit\+Action@{quit\+Action}}
+\index{quit\+Action@{quit\+Action}!Game@{Game}}
+\subsubsection[{quit\+Action()}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+quit\+Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_a53324252827f9f298f67ee4c46675029}
+Promts the player if he/she really wants to quit the game. \hypertarget{classGame_a612ca57db4b230ac5d927e72519ea571}{}\index{Game@{Game}!S\+E\+P\+A\+R\+A\+T\+O\+R@{S\+E\+P\+A\+R\+A\+T\+O\+R}}
+\index{S\+E\+P\+A\+R\+A\+T\+O\+R@{S\+E\+P\+A\+R\+A\+T\+O\+R}!Game@{Game}}
+\subsubsection[{S\+E\+P\+A\+R\+A\+T\+O\+R(int i)}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+S\+E\+P\+A\+R\+A\+T\+O\+R (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_a612ca57db4b230ac5d927e72519ea571}
+Used to print out a series of \char`\"{}\#\char`\"{} to separate lines. 
+\begin{DoxyParams}{Parameters}
+{\em int} & amount of \#s. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGame_abe6ec2322cdfa5005ccccd8b07d789fe}{}\index{Game@{Game}!unlock\+Action@{unlock\+Action}}
+\index{unlock\+Action@{unlock\+Action}!Game@{Game}}
+\subsubsection[{unlock\+Action(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\+unlock\+Action (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classGame_abe6ec2322cdfa5005ccccd8b07d789fe}
+
+
+Handles the unlocking of doors. 
+
+The directions are\+: 0=North ~\newline
+ 1=East ~\newline
+ 2=West ~\newline
+ 3=South ~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em int} & The direction \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+java\end{DoxyCompactItemize}

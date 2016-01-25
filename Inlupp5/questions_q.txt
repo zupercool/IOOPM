@@ -1,0 +1,6 @@
+0;Can you make a pot without clay?;No;Yes;Maybe;2
+1;What is the proper formal attire for a gorilla?;Shorts;A Cape;A Tux;2
+2;What is a pug?;A Dragon; A Dog; A Shoe;1
+3;Where are we?;Polacks;Greece;Moon;0
+4;Braaaaiiinnnsss;Yes;No;Prefer Broccolli;0
+5;How many chackras does the average foot have?;1;100;Many;2

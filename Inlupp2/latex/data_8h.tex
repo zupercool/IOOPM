@@ -1,0 +1,164 @@
+\hypertarget{data_8h}{\section{data.\-h File Reference}
+\label{data_8h}\index{data.\-h@{data.\-h}}
+}
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{data_8h_afc13b41f45851e256348a0a9db5c6f66}{typedef struct \hyperlink{structGoods}{Goods} {\bfseries Goods}}\label{data_8h_afc13b41f45851e256348a0a9db5c6f66}
+
+\item 
+\hypertarget{data_8h_ab26dd762830bf84662e121e7c6c9de4b}{typedef struct \hyperlink{structshelff}{shelff} {\bfseries shelff}}\label{data_8h_ab26dd762830bf84662e121e7c6c9de4b}
+
+\item 
+\hypertarget{data_8h_aec59a20e8ed161e4bf2c3a207dce62fa}{typedef struct \hyperlink{structpall}{pall} {\bfseries pall}}\label{data_8h_aec59a20e8ed161e4bf2c3a207dce62fa}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{data_8h_a9dfd3a7033744e6050fe73869c0dac9e}{\hyperlink{structGoods}{Goods} $\ast$ {\bfseries create\-\_\-tree} ()}\label{data_8h_a9dfd3a7033744e6050fe73869c0dac9e}
+
+\item 
+\hypertarget{data_8h_ad095e08cb691bdb543ce0710a9426363}{\hyperlink{structshelff}{shelff} $\ast$ {\bfseries create\-\_\-list} ()}\label{data_8h_ad095e08cb691bdb543ce0710a9426363}
+
+\item 
+\hypertarget{data_8h_a8b88cd0ca32cb2754b5c8ff04ec65932}{\hyperlink{structpall}{pall} $\ast$ {\bfseries create\-\_\-pall} ()}\label{data_8h_a8b88cd0ca32cb2754b5c8ff04ec65932}
+
+\item 
+void \hyperlink{data_8h_a2887231f7ea61260ffe22a6227625045}{free\-\_\-loop} (\hyperlink{structGoods}{Goods} $\ast$$\ast$m\-\_\-t)
+\begin{DoxyCompactList}\small\item\em Frees the tree from the heap. \end{DoxyCompactList}\item 
+\hypertarget{data_8h_af1ec5559b5541b24d4b36b82195b9b21}{void {\bfseries free\-\_\-loop\-\_\-pall} (\hyperlink{structpall}{pall} $\ast$$\ast$m\-\_\-p)}\label{data_8h_af1ec5559b5541b24d4b36b82195b9b21}
+
+\item 
+void \hyperlink{data_8h_a282abd4a1508dffedd69ff0e2ead7db8}{add\-\_\-action} (\hyperlink{structGoods}{Goods} $\ast$$\ast$main\-\_\-tree)
+\begin{DoxyCompactList}\small\item\em Adds an item\par
+. \end{DoxyCompactList}\item 
+void \hyperlink{data_8h_af9420269b40a77d17a53733fd037f935}{list\-\_\-action} (\hyperlink{structGoods}{Goods} $\ast$main\-\_\-tree)
+\begin{DoxyCompactList}\small\item\em Prints out list. \end{DoxyCompactList}\item 
+void \hyperlink{data_8h_afc12646e606b16c7cc23072dfc25fb29}{remove\-\_\-action} (\hyperlink{structGoods}{Goods} $\ast$$\ast$m\-\_\-t)
+\begin{DoxyCompactList}\small\item\em Takes away the an item from the tree. \end{DoxyCompactList}\item 
+void \hyperlink{data_8h_a0ac9c7ee4d0be119ae4e6b28eefd54a6}{edit\-\_\-action} (\hyperlink{structGoods}{Goods} $\ast$$\ast$m\-\_\-t)
+\begin{DoxyCompactList}\small\item\em Edits a chosen item. \end{DoxyCompactList}\item 
+void \hyperlink{data_8h_a1bbd4b247c33f730cdedde23e83e0835}{pal\-\_\-action} (\hyperlink{structGoods}{Goods} $\ast$$\ast$m\-\_\-t, \hyperlink{structpall}{pall} $\ast$$\ast$m\-\_\-p)
+\begin{DoxyCompactList}\small\item\em The user's basket\par
+\par
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\textbackslash{} The warehouse main actions and structures. The list of items is constructed by a tree while the shelfs of a item is build up by linked list. 
+
+\subsection{Function Documentation}
+\hypertarget{data_8h_a282abd4a1508dffedd69ff0e2ead7db8}{\index{data.\-h@{data.\-h}!add\-\_\-action@{add\-\_\-action}}
+\index{add\-\_\-action@{add\-\_\-action}!data.h@{data.\-h}}
+\subsubsection[{add\-\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void add\-\_\-action (
+\begin{DoxyParamCaption}
+\item[{{\bf Goods} $\ast$$\ast$}]{main\-\_\-tree}
+\end{DoxyParamCaption}
+)}}\label{data_8h_a282abd4a1508dffedd69ff0e2ead7db8}
+
+
+Adds an item\par
+. 
+
+It takes the input of the user, place it in a node and places it in the main tree in the right order when compared to the other items in the list.\par
+It will check if the input of the user is valid. Such as if the price is not negativ and that infact the user have used numbers. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}main\-\_\-tree\mbox{]}} & a tree structure  Void funtion\-: It will just update the main tree. \\
+\hline
+\end{DoxyParams}
+\hypertarget{data_8h_a0ac9c7ee4d0be119ae4e6b28eefd54a6}{\index{data.\-h@{data.\-h}!edit\-\_\-action@{edit\-\_\-action}}
+\index{edit\-\_\-action@{edit\-\_\-action}!data.h@{data.\-h}}
+\subsubsection[{edit\-\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void edit\-\_\-action (
+\begin{DoxyParamCaption}
+\item[{{\bf Goods} $\ast$$\ast$}]{m\-\_\-t}
+\end{DoxyParamCaption}
+)}}\label{data_8h_a0ac9c7ee4d0be119ae4e6b28eefd54a6}
+
+
+Edits a chosen item. 
+
+Will create a new node, remove the old one, and place the new one in the tree. The user will be asked to change everthing. \begin{DoxyWarning}{Warning}
+This doesn't work if you want to place serveral shelf in the new node when editing. 
+\end{DoxyWarning}
+\hypertarget{data_8h_a2887231f7ea61260ffe22a6227625045}{\index{data.\-h@{data.\-h}!free\-\_\-loop@{free\-\_\-loop}}
+\index{free\-\_\-loop@{free\-\_\-loop}!data.h@{data.\-h}}
+\subsubsection[{free\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-loop (
+\begin{DoxyParamCaption}
+\item[{{\bf Goods} $\ast$$\ast$}]{m\-\_\-t}
+\end{DoxyParamCaption}
+)}}\label{data_8h_a2887231f7ea61260ffe22a6227625045}
+
+
+Frees the tree from the heap. 
+
+
+
+ \hypertarget{data_8h_af9420269b40a77d17a53733fd037f935}{\index{data.\-h@{data.\-h}!list\-\_\-action@{list\-\_\-action}}
+\index{list\-\_\-action@{list\-\_\-action}!data.h@{data.\-h}}
+\subsubsection[{list\-\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-action (
+\begin{DoxyParamCaption}
+\item[{{\bf Goods} $\ast$}]{main\-\_\-tree}
+\end{DoxyParamCaption}
+)}}\label{data_8h_af9420269b40a77d17a53733fd037f935}
+
+
+Prints out list. 
+
+The list\-\_\-action will print out the item in the tree in the right order and also counted, for example\-:\par
+ 1) Apple\par
+ 2) Banana\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}main\-\_\-tree\mbox{]}} & a tree structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void funtion\-: It will just update the main tree. 
+\end{DoxyReturn}
+\hypertarget{data_8h_a1bbd4b247c33f730cdedde23e83e0835}{\index{data.\-h@{data.\-h}!pal\-\_\-action@{pal\-\_\-action}}
+\index{pal\-\_\-action@{pal\-\_\-action}!data.h@{data.\-h}}
+\subsubsection[{pal\-\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void pal\-\_\-action (
+\begin{DoxyParamCaption}
+\item[{{\bf Goods} $\ast$$\ast$}]{m\-\_\-t, }
+\item[{{\bf pall} $\ast$$\ast$}]{m\-\_\-p}
+\end{DoxyParamCaption}
+)}}\label{data_8h_a1bbd4b247c33f730cdedde23e83e0835}
+
+
+The user's basket\par
+\par
+. 
+
+The function will place item that the user chose in the basket 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}main\-\_\-tree,main\-\_\-pall\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The function will from certain wrong inputs(like when you try to take to many item at the same time to the list) through you out of the function without any explaination. 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Make main\-\_\-pall take from serveral shelfs from main\-\_\-tree at the same time. \end{DoxyRefDesc}
+\hypertarget{data_8h_afc12646e606b16c7cc23072dfc25fb29}{\index{data.\-h@{data.\-h}!remove\-\_\-action@{remove\-\_\-action}}
+\index{remove\-\_\-action@{remove\-\_\-action}!data.h@{data.\-h}}
+\subsubsection[{remove\-\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void remove\-\_\-action (
+\begin{DoxyParamCaption}
+\item[{{\bf Goods} $\ast$$\ast$}]{m\-\_\-t}
+\end{DoxyParamCaption}
+)}}\label{data_8h_afc12646e606b16c7cc23072dfc25fb29}
+
+
+Takes away the an item from the tree. 
+
+It should be able to also to remove just a shelf in an item. And if it takes away a whole item should the tree's nodes make sure that everything is still reschable, except of the removed item.\par
+ Uses list\-\_\-ation(); 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}main\-\_\-tree\mbox{]}} & tree stucture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void function\-: It will just update the main tree. 
+\end{DoxyReturn}

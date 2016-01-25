@@ -1,0 +1,163 @@
+\hypertarget{classInventory}{}\section{Inventory Class Reference}
+\label{classInventory}\index{Inventory@{Inventory}}
+
+
+Class resposible for different inventorys such as the avatars backpack.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInventory_a0c1b37cfe68e9826b61ceadd9e360744}{Inventory} (int max\+Capacity)
+\begin{DoxyCompactList}\small\item\em Handles the creation of a new \hyperlink{classInventory}{Inventory}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classInventory_ae88a0b1d1058d925daa87a5a8c514d55}{add\+Key} ()
+\item 
+boolean \hyperlink{classInventory_a2f51b9650e3b6b72c790ce70af2807b4}{contain\+Key} ()
+\item 
+boolean \hyperlink{classInventory_a650574968bd49dd7f530d9be365b1eac}{remove\+Key} ()
+\item 
+boolean \hyperlink{classInventory_a9b72524737dae6d453a5a3e34732c8d8}{add\+Book} (\hyperlink{classBook}{Book} new\+Book)
+\begin{DoxyCompactList}\small\item\em Adds a book to the inventory. \end{DoxyCompactList}\item 
+\hyperlink{classBook}{Book} \hyperlink{classInventory_a2401c8b134a26ce2f50b70a0d913a5af}{get\+Book} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the book at index. \end{DoxyCompactList}\item 
+boolean \hyperlink{classInventory_a79e7dfaa4acec1562a8eca51f4935146}{remove\+Book} (int index)
+\begin{DoxyCompactList}\small\item\em Removes the book at provided index. \end{DoxyCompactList}\item 
+int \hyperlink{classInventory_ac663a5a8da5d711b8bc158193114f0e6}{books\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Fetches how many books are currently in the inventory. \end{DoxyCompactList}\item 
+void \hyperlink{classInventory_a6965b4166b280d887b8c54c6c46b099b}{print} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class resposible for different inventorys such as the avatars backpack. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classInventory_a0c1b37cfe68e9826b61ceadd9e360744}{}\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\subsubsection[{Inventory(int max\+Capacity)}]{\setlength{\rightskip}{0pt plus 5cm}Inventory.\+Inventory (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+Capacity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a0c1b37cfe68e9826b61ceadd9e360744}
+
+
+Handles the creation of a new \hyperlink{classInventory}{Inventory}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & max\+Capacity \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classInventory_a9b72524737dae6d453a5a3e34732c8d8}{}\index{Inventory@{Inventory}!add\+Book@{add\+Book}}
+\index{add\+Book@{add\+Book}!Inventory@{Inventory}}
+\subsubsection[{add\+Book(\+Book new\+Book)}]{\setlength{\rightskip}{0pt plus 5cm}boolean Inventory.\+add\+Book (
+\begin{DoxyParamCaption}
+\item[{{\bf Book}}]{new\+Book}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a9b72524737dae6d453a5a3e34732c8d8}
+
+
+Adds a book to the inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classBook}{Book}} & true if successfull, false if not \\
+\hline
+\end{DoxyParams}
+\hypertarget{classInventory_ae88a0b1d1058d925daa87a5a8c514d55}{}\index{Inventory@{Inventory}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!Inventory@{Inventory}}
+\subsubsection[{add\+Key()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Inventory.\+add\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_ae88a0b1d1058d925daa87a5a8c514d55}
+Adds a key to the player \hyperlink{classInventory}{Inventory} \begin{DoxyReturn}{Returns}
+true if Successfull add, false if \hyperlink{classInventory}{Inventory} is full. 
+\end{DoxyReturn}
+\hypertarget{classInventory_ac663a5a8da5d711b8bc158193114f0e6}{}\index{Inventory@{Inventory}!books\+Quantity@{books\+Quantity}}
+\index{books\+Quantity@{books\+Quantity}!Inventory@{Inventory}}
+\subsubsection[{books\+Quantity()}]{\setlength{\rightskip}{0pt plus 5cm}int Inventory.\+books\+Quantity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_ac663a5a8da5d711b8bc158193114f0e6}
+
+
+Fetches how many books are currently in the inventory. 
+
+\begin{DoxyReturn}{Returns}
+int Amount of books in inventory 
+\end{DoxyReturn}
+\hypertarget{classInventory_a2f51b9650e3b6b72c790ce70af2807b4}{}\index{Inventory@{Inventory}!contain\+Key@{contain\+Key}}
+\index{contain\+Key@{contain\+Key}!Inventory@{Inventory}}
+\subsubsection[{contain\+Key()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Inventory.\+contain\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a2f51b9650e3b6b72c790ce70af2807b4}
+Checks if there is any keys in the inventory \begin{DoxyReturn}{Returns}
+boolean true if there are, false if not. 
+\end{DoxyReturn}
+\hypertarget{classInventory_a2401c8b134a26ce2f50b70a0d913a5af}{}\index{Inventory@{Inventory}!get\+Book@{get\+Book}}
+\index{get\+Book@{get\+Book}!Inventory@{Inventory}}
+\subsubsection[{get\+Book(int index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Book} Inventory.\+get\+Book (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a2401c8b134a26ce2f50b70a0d913a5af}
+
+
+Gets the book at index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & index of the book \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classBook}{Book} if index is in range, otherwise null 
+\end{DoxyReturn}
+\hypertarget{classInventory_a6965b4166b280d887b8c54c6c46b099b}{}\index{Inventory@{Inventory}!print@{print}}
+\index{print@{print}!Inventory@{Inventory}}
+\subsubsection[{print()}]{\setlength{\rightskip}{0pt plus 5cm}void Inventory.\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a6965b4166b280d887b8c54c6c46b099b}
+Prints the \hyperlink{classInventory}{Inventory} to std-\/output \hypertarget{classInventory_a79e7dfaa4acec1562a8eca51f4935146}{}\index{Inventory@{Inventory}!remove\+Book@{remove\+Book}}
+\index{remove\+Book@{remove\+Book}!Inventory@{Inventory}}
+\subsubsection[{remove\+Book(int index)}]{\setlength{\rightskip}{0pt plus 5cm}boolean Inventory.\+remove\+Book (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a79e7dfaa4acec1562a8eca51f4935146}
+
+
+Removes the book at provided index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & Index of the book to removes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean true if successfull, false if not 
+\end{DoxyReturn}
+\hypertarget{classInventory_a650574968bd49dd7f530d9be365b1eac}{}\index{Inventory@{Inventory}!remove\+Key@{remove\+Key}}
+\index{remove\+Key@{remove\+Key}!Inventory@{Inventory}}
+\subsubsection[{remove\+Key()}]{\setlength{\rightskip}{0pt plus 5cm}boolean Inventory.\+remove\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classInventory_a650574968bd49dd7f530d9be365b1eac}
+Removes a key from the inventory \begin{DoxyReturn}{Returns}
+boolean true if sucessfull, false if not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Inventory.\+java\end{DoxyCompactItemize}

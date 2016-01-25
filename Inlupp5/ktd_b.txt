@@ -1,0 +1,4 @@
+0;Kaffetermoshantering;Flodor Rask;1943;2
+1;A Thermos Confessions;A Thermos;2012;3
+2;Thermos In Space, Why?;Melwin Murv;1995;2
+3;Thermos En Français;Claude Croissant;1892;1
